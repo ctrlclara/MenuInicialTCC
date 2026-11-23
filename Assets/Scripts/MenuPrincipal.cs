@@ -5,6 +5,7 @@ public class MenuPrincipal : MonoBehaviour
 {
     [SerializeField] private GameObject painelMenu;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject painelCreditos;
 
     [SerializeField] private string nomeCenaJogo = "Jogo";
 
@@ -25,6 +26,12 @@ public class MenuPrincipal : MonoBehaviour
         painelOpcoes.SetActive(true);
     }
 
+    public void AbrirCreditos()
+    {
+        painelMenu.SetActive(false);
+        painelCreditos.SetActive(true);
+    }
+
     public void Voltar()
     {
         MostrarMenu();
@@ -42,6 +49,7 @@ public class MenuPrincipal : MonoBehaviour
     private void MostrarMenu()
     {
         painelOpcoes.SetActive(false);
+        painelCreditos.SetActive(false);
         painelMenu.SetActive(true);
     }
 }
